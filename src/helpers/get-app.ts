@@ -22,7 +22,7 @@ const setupSubdomain = (location: string) => {
 export const domain = (name: string = '') => {
     const host = window.location.host;
     const hostSplit = host.split('.');
-    const hostname = hostSplit.slice(-1)[0]
-    const protocol = window.location.protocol;
-    return `${protocol}//${name ? `${name}.` : ''}${hostname}/`
+    const isLocalhost = hostSplit.slice(-1)[0].includes('localhost');
+    const hostname = hostSplit.slice(isLocalhost ? -1 : -2).join('.')
+    return `${window.location.protocol}//${name ? `${name}.` : ''}${hostname}/`
 }
