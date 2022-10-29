@@ -6,7 +6,6 @@ import UsersList from "../components/UsersList"
 import TeacherList from "../components/TeacherList"
 
 export const MainRouter = () => {
-
     return (
         <Routes>
             <Route path="/" element={<Home />}/>

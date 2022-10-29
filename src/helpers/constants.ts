@@ -1,6 +1,6 @@
 import { MainRouter, UsersRouter, TeachersRouter } from './../routes/index';
 
-type AppType = {
+export type AppType = {
     subdomain: string;
     router: () => JSX.Element;
     main: boolean;
