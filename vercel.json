@@ -1,4 +1,22 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "host",
+            "value": "user.wsonline.ga"
+          },
+          {
+            "type": "host",
+            "value": "teacher.wsonline.ga"
+          },
+          {
+            "type": "host",
+            "value": ".wsonline.ga"
+          }
+        ],
+        "destination": "/"
+      }
+    ]
 }
-  
