@@ -1,36 +1,3 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "has": [
-          {
-            "type": "host",
-            "value": "user.wsonline.ga"
-          },
-          {
-            "type": "host",
-            "value": "teacher.wsonline.ga"
-          },
-          {
-            "type": "host",
-            "value": "wsonline.ga"
-          }
-        ],
-        "destination": "/"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "user.wsonline.ga"
-          }
-        ],
-        "destination": "/users/:path*"
-      }
-    ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
