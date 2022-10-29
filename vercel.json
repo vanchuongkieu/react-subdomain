@@ -17,6 +17,20 @@
           }
         ],
         "destination": "/"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      },
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "user.wsonline.ga"
+          }
+        ],
+        "destination": "/users/:path*"
       }
     ]
 }
